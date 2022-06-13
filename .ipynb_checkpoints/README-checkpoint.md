@@ -33,10 +33,11 @@
 #### It predicts a histogram model for probability distribution. By learning the distribution rather than simply the expected value, the algorithm is able to stay more stable during training, leading to improved final performance. 
 
 ## Hyperparameter Tuning
-#### Since The CartPole-v0 takes 200 steps only, to reduce the time taken to complete the training the,
-#### "num_iterations" are reduced to 10000
+#### Since The CartPole-v0 takes 200 steps only, the 1000 step intervals are used to log the "average returns"
+#### To reduce the time taken to complete the training the following parameters where tweaked
+#### "num_iterations" were reduced to 10000 but in some test the score never reached 195
 #### "learning_rate" changing the learning rate increased the loss so it is kept same as in demonstrated example by tensorflow docs
-#### "eval_interval" are reduced to 500 to speed up the training process
+#### "eval_interval" are reduced to 500 to speed up the training process but in some runs the score never reached 195
 
 ## Resources
    (1) https://www.gymlibrary.ml/environments/classic_control/cart_pole/
